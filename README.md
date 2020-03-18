@@ -1,2 +1,10 @@
-# Info-2020_Interface
-CAN interface description for 2020 robot 
+# Description de l'interface
+
+Ce repo contient les informations utilisées pour la communication entre composants sur le bus CAN.
+
+## Générer les headers arduino
+
+Lancer le script python3 associé.
+```bash
+./script/generate_arduino.py
+```
