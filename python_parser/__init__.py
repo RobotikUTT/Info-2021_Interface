@@ -9,7 +9,13 @@ _frames_filepath = os.path.join(_data_dir, 'frames.json')
 
 
 devicesList = parse_devices(_devices_filepath)
+"""A list of all `python_parser.can_description_parser.Device`s described in the *devices.json* file.\n
+This could be imported from this module."""
 
 messagesList = parse_messages(_messages_filepath)
+"""A list of all `python_parser.can_description_parser.Message`s described in the *messages.json* file.\n
+This could be imported from this module."""
 
 framesList = parse_frames(_frames_filepath)
+"""A list of all `python_parser.can_description_parser.Frame`s described in the *frames.json* file.\n
+This could be imported from this module."""

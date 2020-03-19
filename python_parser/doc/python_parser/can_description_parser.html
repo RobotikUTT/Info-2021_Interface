@@ -33,7 +33,7 @@ import json
 @dataclass
 class Device:
         name: str
-        _id: int
+        arbitration_id: int
 
 
 @dataclass
@@ -66,24 +66,30 @@ class Frame:
         fields: list
 
 
-# Return a list of Device objects (please see the Device @dataclass for the structure)
 def parse_devices(devices_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Device` objects.
+        &#34;&#34;&#34;
         with open(devices_filepath, &#39;r&#39;) as f:
                 devices = json.load(f)[&#34;devices&#34;]
 
         return [Device(**device) for device in devices]
 
 
-# Return a list of Message objects (please see the Message @dataclass for the structure)
 def parse_messages(messages_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Message` objects.
+        &#34;&#34;&#34;
         with open(messages_filepath, &#39;r&#39;) as f:
                 messages = json.load(f)[&#34;messages&#34;]
 
         return [Message(message[&#34;direction&#34;], [Bind(**bind) for bind in message[&#34;binds&#34;]]) for message in messages]
 
 
-# Return a list of Frame objects (please see the Frame @dataclass for the structure)
 def parse_frames(frames_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Frame` objects.
+        &#34;&#34;&#34;
         with open(frames_filepath, &#39;r&#39;) as f:
                 frames = json.load(f)[&#34;frames&#34;]
 
@@ -105,12 +111,15 @@ def parse_frames(frames_filepath):
 <span>def <span class="ident">parse_devices</span></span>(<span>devices_filepath)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
+<section class="desc"><p>Return a list of <a title="python_parser.can_description_parser.Device" href="#python_parser.can_description_parser.Device"><code>Device</code></a> objects.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def parse_devices(devices_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Device` objects.
+        &#34;&#34;&#34;
         with open(devices_filepath, &#39;r&#39;) as f:
                 devices = json.load(f)[&#34;devices&#34;]
 
@@ -121,12 +130,15 @@ def parse_frames(frames_filepath):
 <span>def <span class="ident">parse_frames</span></span>(<span>frames_filepath)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
+<section class="desc"><p>Return a list of <a title="python_parser.can_description_parser.Frame" href="#python_parser.can_description_parser.Frame"><code>Frame</code></a> objects.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def parse_frames(frames_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Frame` objects.
+        &#34;&#34;&#34;
         with open(frames_filepath, &#39;r&#39;) as f:
                 frames = json.load(f)[&#34;frames&#34;]
 
@@ -141,12 +153,15 @@ def parse_frames(frames_filepath):
 <span>def <span class="ident">parse_messages</span></span>(<span>messages_filepath)</span>
 </code></dt>
 <dd>
-<section class="desc"></section>
+<section class="desc"><p>Return a list of <a title="python_parser.can_description_parser.Message" href="#python_parser.can_description_parser.Message"><code>Message</code></a> objects.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def parse_messages(messages_filepath):
+        &#34;&#34;&#34;
+        Return a list of `python_parser.can_description_parser.Message` objects.
+        &#34;&#34;&#34;
         with open(messages_filepath, &#39;r&#39;) as f:
                 messages = json.load(f)[&#34;messages&#34;]
 
@@ -175,17 +190,17 @@ def parse_frames(frames_filepath):
 </dd>
 <dt id="python_parser.can_description_parser.Device"><code class="flex name class">
 <span>class <span class="ident">Device</span></span>
-<span>(</span><span>name, _id)</span>
+<span>(</span><span>name, arbitration_id)</span>
 </code></dt>
 <dd>
-<section class="desc"><p>Device(name: str, _id: int)</p></section>
+<section class="desc"><p>Device(name: str, arbitration_id: int)</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">class Device:
         name: str
-        _id: int</code></pre>
+        arbitration_id: int</code></pre>
 </details>
 </dd>
 <dt id="python_parser.can_description_parser.Field"><code class="flex name class">

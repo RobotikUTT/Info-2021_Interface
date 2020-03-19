@@ -2,19 +2,19 @@
 	"devices":[
 		{
 			"name": "all",
-			"_id": 0
+			"arbitration_id": 0
 		},
 		{
 			"name": "bbb",
-			"_id": 1
+			"arbitration_id": 1
 		},
 		{
 			"name": "stm",
-			"_id": 2
+			"arbitration_id": 2
 		},
 		{
 			"name": "arduino",
-			"_id": 3
+			"arbitration_id": 3
 		}
 	]
 }

@@ -7,7 +7,7 @@ import json
 @dataclass
 class Device:
 	name: str
-	_id: int
+	arbitration_id: int
 
 
 @dataclass
@@ -40,24 +40,30 @@ class Frame:
 	fields: list
 
 
-# Return a list of Device objects (please see the Device @dataclass for the structure)
 def parse_devices(devices_filepath):
+	"""
+	Return a list of `python_parser.can_description_parser.Device` objects.
+	"""
 	with open(devices_filepath, 'r') as f:
 		devices = json.load(f)["devices"]
 
 	return [Device(**device) for device in devices]
 
 
-# Return a list of Message objects (please see the Message @dataclass for the structure)
 def parse_messages(messages_filepath):
+	"""
+	Return a list of `python_parser.can_description_parser.Message` objects.
+	"""
 	with open(messages_filepath, 'r') as f:
 		messages = json.load(f)["messages"]
 
 	return [Message(message["direction"], [Bind(**bind) for bind in message["binds"]]) for message in messages]
 
 
-# Return a list of Frame objects (please see the Frame @dataclass for the structure)
 def parse_frames(frames_filepath):
+	"""
+	Return a list of `python_parser.can_description_parser.Frame` objects.
+	"""
 	with open(frames_filepath, 'r') as f:
 		frames = json.load(f)["frames"]
 
