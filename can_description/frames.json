@@ -32,12 +32,20 @@
 			"cmd_id": 4,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"linear_speed": {},
-				"angular_speed": {},
-				"duration": {}
-			}
+			"fields": [
+				{
+					"name": "linear_speed",
+					"_type": "word"
+				},
+				{
+					"name": "angular_speed",
+					"_type": "word"
+				},
+				{
+					"name": "duration",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "stm_coder_data",
@@ -45,11 +53,16 @@
 			"cmd_id": 5,
 			"source": "stm",
 			"destination": "all",
-			"fields_type": ["word", "word"],
-			"fields": {
-				"right_wheel_dist": {},
-				"left_wheel_dist": {}
-			}
+			"fields": [
+				{
+					"name": "right_wheel_dist",
+					"_type": "word"
+				},
+				{
+					"name": "left_wheel_dist",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_stm_mode",
@@ -57,12 +70,15 @@
 			"cmd_id": 7,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["byte"],
-			"fields": {
-				"mode": {"stop":0, "start":1, "pause":2, "resume":3,
-						"reset_id":4, "set_emergency_stop":5, "next_order":6,
-						"reset_order":7, "reset_emergency_stop":8}
-			}
+			"fields": [
+				{
+					"name": "mode",
+					"_type": "byte",
+					"enum": {"stop":0, "start":1, "pause":2, "resume":3,
+							"reset_id":4, "set_emergency_stop":5, "next_order":6,
+							"reset_order":7, "reset_emergency_stop":8}
+				}
+			]
 		},
 		{
 			"name": "go_to_angle",
@@ -70,13 +86,24 @@
 			"cmd_id": 8,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word", "byte"],
-			"fields": {
-				"x": {},
-				"y": {},
-				"angle": {},
-				"direction": {}
-			}
+			"fields": [
+				{
+					"name": "x",
+					"_type": "word"
+				},
+				{
+					"name": "y",
+					"_type": "word"
+				},
+				{
+					"name": "angle",
+					"_type": "word"
+				},
+				{
+					"name": "direction",
+					"_type": "byte"
+				}
+			]
 		},
 		{
 			"name": "go_to",
@@ -84,12 +111,20 @@
 			"cmd_id": 9,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"x": {},
-				"y": {},
-				"direction": {}
-			}
+			"fields": [
+				{
+					"name": "x",
+					"_type": "word"
+				},
+				{
+					"name": "y",
+					"_type": "word"
+				},
+				{
+					"name": "direction",
+					"_type": "byte"
+				}
+			]
 		},
 		{
 			"name": "rotate",
@@ -97,10 +132,12 @@
 			"cmd_id": 10,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word"],
-			"fields": {
-				"angle": {}
-			}
+			"fields": [
+				{
+					"name": "angle",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_left_pid",
@@ -108,12 +145,20 @@
 			"cmd_id": 12,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"p": {},
-				"i": {},
-				"d": {}
-			}
+			"fields": [
+				{
+					"name": "p",
+					"_type": "word"
+				},
+				{
+					"name": "i",
+					"_type": "word"
+				},
+				{
+					"name": "d",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_right_pid",
@@ -121,12 +166,20 @@
 			"cmd_id": 13,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"p": {},
-				"i": {},
-				"d": {}
-			}
+			"fields": [
+				{
+					"name": "p",
+					"_type": "word"
+				},
+				{
+					"name": "i",
+					"_type": "word"
+				},
+				{
+					"name": "d",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_both_pid",
@@ -134,12 +187,20 @@
 			"cmd_id": 14,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"p": {},
-				"i": {},
-				"d": {}
-			}
+			"fields": [
+				{
+					"name": "p",
+					"_type": "word"
+				},
+				{
+					"name": "i",
+					"_type": "word"
+				},
+				{
+					"name": "d",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_pwm",
@@ -147,11 +208,16 @@
 			"cmd_id": 15,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word"],
-			"fields": {
-				"left_pwm": {},
-				"right_pwm": {}
-			}
+			"fields": [
+				{
+					"name": "left_pwm",
+					"_type": "word"
+				},
+				{
+					"name": "right_pwm",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_position",
@@ -159,12 +225,20 @@
 			"cmd_id": 16,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"x": {},
-				"y": {},
-				"angle": {}
-			}
+			"fields": [
+				{
+					"name": "x",
+					"_type": "word"
+				},
+				{
+					"name": "y",
+					"_type": "word"
+				},
+				{
+					"name": "angle",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "set_stm_param",
@@ -172,12 +246,20 @@
 			"cmd_id": 17,
 			"source": "bbb",
 			"destination": "stm",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"max_linear_speed": {},
-				"max_angular_speed": {},
-				"max_acc": {}
-			}
+			"fields": [
+				{
+					"name": "max_linear_speed",
+					"_type": "word"
+				},
+				{
+					"name": "max_angular_speed",
+					"_type": "word"
+				},
+				{
+					"name": "max_acc",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "current_pos",
@@ -185,12 +267,20 @@
 			"cmd_id": 18,
 			"source": "stm",
 			"destination": "bbb",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"x": {},
-				"y": {},
-				"angle": {}
-			}
+			"fields": [
+				{
+					"name": "x",
+					"_type": "word"
+				},
+				{
+					"name": "y",
+					"_type": "word"
+				},
+				{
+					"name": "angle",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "current_pwm",
@@ -198,11 +288,16 @@
 			"cmd_id": 19,
 			"source": "stm",
 			"destination": "bbb",
-			"fields_type": ["word", "word"],
-			"fields": {
-				"left_pwm": {},
-				"right_pwm": {}
-			}
+			"fields": [
+				{
+					"name": "left_pwm",
+					"_type": "word"
+				},
+				{
+					"name": "right_pwm",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "current_speed",
@@ -210,12 +305,20 @@
 			"cmd_id": 20,
 			"source": "stm",
 			"destination": "bbb",
-			"fields_type": ["word", "word", "word"],
-			"fields": {
-				"linear_speed": {},
-				"left_speed": {},
-				"right_speed": {}
-			}
+			"fields": [
+				{
+					"name": "linear_speed",
+					"_type": "word"
+				},
+				{
+					"name": "left_speed",
+					"_type": "word"
+				},
+				{
+					"name": "right_speed",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "sonar_distance",
@@ -223,13 +326,24 @@
 			"cmd_id": 23,
 			"source": "arduino",
 			"destination": "bbb",
-			"fields_type": ["byte", "byte", "byte", "byte"],
-			"fields": {
-				"dist_front_left": {},
-				"dist_front_right": {},
-				"dist_back_left": {},
-				"dist_back_right": {}
-			}
+			"fields": [
+				{
+					"name": "dist_front_left",
+					"_type": "byte"
+				},
+				{
+					"name": "dist_front_right",
+					"_type": "byte"
+				},
+				{
+					"name": "dist_back_left",
+					"_type": "byte"
+				},
+				{
+					"name": "dist_back_right",
+					"_type": "byte"
+				}
+			]
 		},
 		{
 			"name": "order_complete",
@@ -237,8 +351,7 @@
 			"cmd_id": 26,
 			"source": "stm",
 			"destination": "bbb",
-			"fields_type": [],
-			"fields": {}
+			"fields": []
 		},
 		{
 			"name": "robot_blocked",
@@ -246,8 +359,7 @@
 			"cmd_id": 28,
 			"source": "stm",
 			"destination": "bbb",
-			"fields_type": [],
-			"fields": {}
+			"fields": []
 		},
 		{
 			"name": "update_screen",
@@ -255,11 +367,17 @@
 			"cmd_id": 30,
 			"source": "arduino",
 			"destination": "bbb",
-			"fields_type": ["word", "byte"],
-			"fields": {
-				"points": {},
-				"status": {"booting":0, "ready":1, "running":2, "error":3, "done":4}
-			}
+			"fields": [
+				{
+					"name": "points",
+					"_type": "word"
+				},
+				{
+					"name": "status",
+					"_type": "byte",
+					"enum": {"booting":0, "ready":1, "running":2, "error":3, "done":4}
+				}
+			]
 		},
 		{
 			"name": "fetch_puck",
@@ -267,8 +385,7 @@
 			"cmd_id": 40,
 			"source": "bbb",
 			"destination": "all",
-			"fields_type": [],
-			"fields": {}
+			"fields": []
 		},
 		{
 			"name": "puck_fetched_chief",
@@ -276,8 +393,7 @@
 			"cmd_id": 41,
 			"source": "all",
 			"destination": "bbb",
-			"fields_type": [],
-			"fields": {}
+			"fields": []
 		},
 		{
 			"name": "set_dock_height",
@@ -285,11 +401,16 @@
 			"cmd_id": 42,
 			"source": "bbb",
 			"destination": "all",
-			"fields_type": ["word", "word"],
-			"fields": {
-				"front_height": {},
-				"back_height": {}
-			}
+			"fields": [
+				{
+					"name": "front_height",
+					"_type": "word"
+				},
+				{
+					"name": "back_height",
+					"_type": "word"
+				}
+			]
 		},
 		{
 			"name": "your_dock_has_fullfilled_your_request",
@@ -297,8 +418,7 @@
 			"cmd_id": 43,
 			"source": "all",
 			"destination": "bbb",
-			"fields_type": [],
-			"fields": {}
+			"fields": []
 		}
 	]
 }
