@@ -1,3 +1,4 @@
+from .can_description_parser import Device, Bind, Message, Field, Frame
 from .can_description_parser import parse_devices, parse_messages, parse_frames
 
 import os.path
