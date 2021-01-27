@@ -15,7 +15,10 @@ Lancer le script Python3:
 
 ## Dossier python_parser
 Module Python3 pour parser les fichiers de description JSON.
-La documentation est disponible dans `python_parser/doc/`.
+
+___
+
+La documentation est disponible dans `python_parser/doc/`.\
 Elle peut aussi être générée à l'aide de pdoc3 (`pip install pdoc3`) avec:
 ```sh
 pdoc --html -o python_parser/doc/ python_parser/ --force
