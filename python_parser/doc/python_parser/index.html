@@ -38,16 +38,24 @@ _frames_filepath = os.path.join(_data_dir, &#39;frames.json&#39;)
 
 
 devicesList = parse_devices(_devices_filepath)
-&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Device`s described in the *devices.json* file.\n
-This could be imported from this module.&#34;&#34;&#34;
+&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Device` described in the *devices.json* file.&#34;&#34;&#34;
+
+devicesById = {d.arbitration_id: d for d in devicesList}
+&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Device` from `devicesList` accessible by their arbitration ID.&#34;&#34;&#34;
+
+devicesByName = {d.name: d for d in devicesList}
+&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Device` from `devicesList` accessible by their name.&#34;&#34;&#34;
+
 
 messagesList = parse_messages(_messages_filepath)
-&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Message`s described in the *messages.json* file.\n
-This could be imported from this module.&#34;&#34;&#34;
+&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Message` described in the *messages.json* file.&#34;&#34;&#34;
+
 
 framesList = parse_frames(_frames_filepath)
-&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Frame`s described in the *frames.json* file.\n
-This could be imported from this module.&#34;&#34;&#34;</code></pre>
+&#34;&#34;&#34;A list of all `python_parser.can_description_parser.Frame` described in the *frames.json* file.&#34;&#34;&#34;
+
+framesByCmdId = {f.cmd_id: f for f in framesList}
+&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their command ID.&#34;&#34;&#34;</code></pre>
 </details>
 </section>
 <section>
@@ -62,20 +70,29 @@ This could be imported from this module.&#34;&#34;&#34;</code></pre>
 <section>
 <h2 class="section-title" id="header-variables">Global variables</h2>
 <dl>
+<dt id="python_parser.devicesById"><code class="name">var <span class="ident">devicesById</span></code></dt>
+<dd>
+<div class="desc"><p>A dictionary with the <code><a title="python_parser.can_description_parser.Device" href="can_description_parser.html#python_parser.can_description_parser.Device">Device</a></code> from <code><a title="python_parser.devicesList" href="#python_parser.devicesList">devicesList</a></code> accessible by their arbitration ID.</p></div>
+</dd>
+<dt id="python_parser.devicesByName"><code class="name">var <span class="ident">devicesByName</span></code></dt>
+<dd>
+<div class="desc"><p>A dictionary with the <code><a title="python_parser.can_description_parser.Device" href="can_description_parser.html#python_parser.can_description_parser.Device">Device</a></code> from <code><a title="python_parser.devicesList" href="#python_parser.devicesList">devicesList</a></code> accessible by their name.</p></div>
+</dd>
 <dt id="python_parser.devicesList"><code class="name">var <span class="ident">devicesList</span></code></dt>
 <dd>
-<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Device" href="can_description_parser.html#python_parser.can_description_parser.Device">Device</a></code>s described in the <em>devices.json</em> file.</p>
-<p>This could be imported from this module.</p></div>
+<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Device" href="can_description_parser.html#python_parser.can_description_parser.Device">Device</a></code> described in the <em>devices.json</em> file.</p></div>
+</dd>
+<dt id="python_parser.framesByCmdId"><code class="name">var <span class="ident">framesByCmdId</span></code></dt>
+<dd>
+<div class="desc"><p>A dictionary with the <code><a title="python_parser.can_description_parser.Frame" href="can_description_parser.html#python_parser.can_description_parser.Frame">Frame</a></code> from <code><a title="python_parser.framesList" href="#python_parser.framesList">framesList</a></code> accessible by their command ID.</p></div>
 </dd>
 <dt id="python_parser.framesList"><code class="name">var <span class="ident">framesList</span></code></dt>
 <dd>
-<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Frame" href="can_description_parser.html#python_parser.can_description_parser.Frame">Frame</a></code>s described in the <em>frames.json</em> file.</p>
-<p>This could be imported from this module.</p></div>
+<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Frame" href="can_description_parser.html#python_parser.can_description_parser.Frame">Frame</a></code> described in the <em>frames.json</em> file.</p></div>
 </dd>
 <dt id="python_parser.messagesList"><code class="name">var <span class="ident">messagesList</span></code></dt>
 <dd>
-<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Message" href="can_description_parser.html#python_parser.can_description_parser.Message">Message</a></code>s described in the <em>messages.json</em> file.</p>
-<p>This could be imported from this module.</p></div>
+<div class="desc"><p>A list of all <code><a title="python_parser.can_description_parser.Message" href="can_description_parser.html#python_parser.can_description_parser.Message">Message</a></code> described in the <em>messages.json</em> file.</p></div>
 </dd>
 </dl>
 </section>
@@ -96,8 +113,11 @@ This could be imported from this module.&#34;&#34;&#34;</code></pre>
 </ul>
 </li>
 <li><h3><a href="#header-variables">Global variables</a></h3>
-<ul class="">
+<ul class="two-column">
+<li><code><a title="python_parser.devicesById" href="#python_parser.devicesById">devicesById</a></code></li>
+<li><code><a title="python_parser.devicesByName" href="#python_parser.devicesByName">devicesByName</a></code></li>
 <li><code><a title="python_parser.devicesList" href="#python_parser.devicesList">devicesList</a></code></li>
+<li><code><a title="python_parser.framesByCmdId" href="#python_parser.framesByCmdId">framesByCmdId</a></code></li>
 <li><code><a title="python_parser.framesList" href="#python_parser.framesList">framesList</a></code></li>
 <li><code><a title="python_parser.messagesList" href="#python_parser.messagesList">messagesList</a></code></li>
 </ul>

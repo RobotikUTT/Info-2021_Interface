@@ -10,13 +10,21 @@ _frames_filepath = os.path.join(_data_dir, 'frames.json')
 
 
 devicesList = parse_devices(_devices_filepath)
-"""A list of all `python_parser.can_description_parser.Device`s described in the *devices.json* file.\n
-This could be imported from this module."""
+"""A list of all `python_parser.can_description_parser.Device` described in the *devices.json* file."""
+
+devicesById = {d.arbitration_id: d for d in devicesList}
+"""A dictionary with the `python_parser.can_description_parser.Device` from `devicesList` accessible by their arbitration ID."""
+
+devicesByName = {d.name: d for d in devicesList}
+"""A dictionary with the `python_parser.can_description_parser.Device` from `devicesList` accessible by their name."""
+
 
 messagesList = parse_messages(_messages_filepath)
-"""A list of all `python_parser.can_description_parser.Message`s described in the *messages.json* file.\n
-This could be imported from this module."""
+"""A list of all `python_parser.can_description_parser.Message` described in the *messages.json* file."""
+
 
 framesList = parse_frames(_frames_filepath)
-"""A list of all `python_parser.can_description_parser.Frame`s described in the *frames.json* file.\n
-This could be imported from this module."""
+"""A list of all `python_parser.can_description_parser.Frame` described in the *frames.json* file."""
+
+framesByCmdId = {f.cmd_id: f for f in framesList}
+"""A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their command ID."""
