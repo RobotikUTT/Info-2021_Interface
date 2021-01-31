@@ -28,3 +28,6 @@ framesList = parse_frames(_frames_filepath)
 
 framesByCmdId = {f.cmd_id: f for f in framesList}
 """A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their command ID."""
+
+framesByName = {f.name: f for f in framesList}
+"""A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their name."""

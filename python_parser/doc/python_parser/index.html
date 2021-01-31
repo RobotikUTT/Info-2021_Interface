@@ -55,7 +55,10 @@ framesList = parse_frames(_frames_filepath)
 &#34;&#34;&#34;A list of all `python_parser.can_description_parser.Frame` described in the *frames.json* file.&#34;&#34;&#34;
 
 framesByCmdId = {f.cmd_id: f for f in framesList}
-&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their command ID.&#34;&#34;&#34;</code></pre>
+&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their command ID.&#34;&#34;&#34;
+
+framesByName = {f.name: f for f in framesList}
+&#34;&#34;&#34;A dictionary with the `python_parser.can_description_parser.Frame` from `framesList` accessible by their name.&#34;&#34;&#34;</code></pre>
 </details>
 </section>
 <section>
@@ -85,6 +88,10 @@ framesByCmdId = {f.cmd_id: f for f in framesList}
 <dt id="python_parser.framesByCmdId"><code class="name">var <span class="ident">framesByCmdId</span></code></dt>
 <dd>
 <div class="desc"><p>A dictionary with the <code><a title="python_parser.can_description_parser.Frame" href="can_description_parser.html#python_parser.can_description_parser.Frame">Frame</a></code> from <code><a title="python_parser.framesList" href="#python_parser.framesList">framesList</a></code> accessible by their command ID.</p></div>
+</dd>
+<dt id="python_parser.framesByName"><code class="name">var <span class="ident">framesByName</span></code></dt>
+<dd>
+<div class="desc"><p>A dictionary with the <code><a title="python_parser.can_description_parser.Frame" href="can_description_parser.html#python_parser.can_description_parser.Frame">Frame</a></code> from <code><a title="python_parser.framesList" href="#python_parser.framesList">framesList</a></code> accessible by their name.</p></div>
 </dd>
 <dt id="python_parser.framesList"><code class="name">var <span class="ident">framesList</span></code></dt>
 <dd>
@@ -118,6 +125,7 @@ framesByCmdId = {f.cmd_id: f for f in framesList}
 <li><code><a title="python_parser.devicesByName" href="#python_parser.devicesByName">devicesByName</a></code></li>
 <li><code><a title="python_parser.devicesList" href="#python_parser.devicesList">devicesList</a></code></li>
 <li><code><a title="python_parser.framesByCmdId" href="#python_parser.framesByCmdId">framesByCmdId</a></code></li>
+<li><code><a title="python_parser.framesByName" href="#python_parser.framesByName">framesByName</a></code></li>
 <li><code><a title="python_parser.framesList" href="#python_parser.framesList">framesList</a></code></li>
 <li><code><a title="python_parser.messagesList" href="#python_parser.messagesList">messagesList</a></code></li>
 </ul>
