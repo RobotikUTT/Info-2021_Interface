@@ -216,6 +216,10 @@
 				{
 					"name": "right_pwm",
 					"_type": "word"
+				},
+				{
+					"name": "duration",
+					"_type": "word"
 				}
 			]
 		},
