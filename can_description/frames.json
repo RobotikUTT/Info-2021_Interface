@@ -22,7 +22,10 @@
 				{
 					"name": "status",
 					"_type": "byte",
-					"enum": {"alive":0, "some_issues":1}
+					"enum": {
+						"alive": 0,
+						"some_issues": 1
+					}
 				}
 			]
 		},
@@ -74,9 +77,17 @@
 				{
 					"name": "mode",
 					"_type": "byte",
-					"enum": {"stop":0, "start":1, "pause":2, "resume":3,
-							"reset_id":4, "set_emergency_stop":5, "next_order":6,
-							"reset_order":7, "reset_emergency_stop":8}
+					"enum": {
+						"stop": 0,
+						"start": 1,
+						"pause": 2,
+						"resume": 3,
+						"reset_id": 4,
+						"set_emergency_stop": 5,
+						"next_order": 6,
+						"reset_order": 7,
+						"reset_emergency_stop": 8
+					}
 				}
 			]
 		},
@@ -379,7 +390,13 @@
 				{
 					"name": "status",
 					"_type": "byte",
-					"enum": {"booting":0, "ready":1, "running":2, "error":3, "done":4}
+					"enum": {
+						"booting": 0,
+						"ready": 1,
+						"running": 2,
+						"error": 3,
+						"done": 4
+					}
 				}
 			]
 		},
@@ -423,6 +440,18 @@
 			"source": "all",
 			"destination": "bbb",
 			"fields": []
+		},
+		{
+			"name": "servo_angle",
+			"description": "Control servo angles ",
+			"cmd_id": 44,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"pin":
+				}
+			]
 		}
 	]
 }
