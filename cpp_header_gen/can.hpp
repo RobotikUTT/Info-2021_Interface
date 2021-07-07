@@ -20,10 +20,10 @@ private:
 public:
     void setup()
     {
-        mcp2515 = new MCP2515(PIN_SPI_SS);
+        mcp2515 = new MCP2515(10);
 
         mcp2515->reset();
-        mcp2515->setBitrate(CAN_500KBPS, MCP_16MHZ); // paramètres les plus rapides testés pour le CAN
+        mcp2515->setBitrate(CAN_500KBPS); // paramètres les plus rapides testés pour le CAN
 
         mcp2515->setNormalMode();
     }
@@ -102,14 +102,17 @@ public:
 	 */
     void flush()
     {
-        can_frame canTxMsg;
+        
 
         while (!buffer.empty())
         {
+            can_frame canTxMsg;
             // Get frame size
             int8_t size = buffer.front();
+            buffer.pop();
             canTxMsg.can_dlc = size;
-            canTxMsg.can_id = buffer.front() + 10;
+            // canTxMsg.can_id = buffer.front() + 10;
+            canTxMsg.can_id = 3;
 
             // Then frame data
             for (int8_t i = 0; i < size; i++)
@@ -117,9 +120,9 @@ public:
                 canTxMsg.data[i] = buffer.front();
                 buffer.pop();
             }
+            mcp2515->sendMessage(&canTxMsg);
         }
 
-        mcp2515->sendMessage(&canTxMsg);
     }
 
     /**
