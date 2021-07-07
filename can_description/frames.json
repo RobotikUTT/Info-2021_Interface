@@ -22,7 +22,10 @@
 				{
 					"name": "status",
 					"_type": "byte",
-					"enum": {"alive":0, "some_issues":1}
+					"enum": {
+						"alive": 0,
+						"some_issues": 1
+					}
 				}
 			]
 		},
@@ -74,9 +77,17 @@
 				{
 					"name": "mode",
 					"_type": "byte",
-					"enum": {"stop":0, "start":1, "pause":2, "resume":3,
-							"reset_id":4, "set_emergency_stop":5, "next_order":6,
-							"reset_order":7, "reset_emergency_stop":8}
+					"enum": {
+						"stop": 0,
+						"start": 1,
+						"pause": 2,
+						"resume": 3,
+						"reset_id": 4,
+						"set_emergency_stop": 5,
+						"next_order": 6,
+						"reset_order": 7,
+						"reset_emergency_stop": 8
+					}
 				}
 			]
 		},
@@ -215,6 +226,10 @@
 				},
 				{
 					"name": "right_pwm",
+					"_type": "word"
+				},
+				{
+					"name": "duration",
 					"_type": "word"
 				}
 			]
@@ -375,7 +390,13 @@
 				{
 					"name": "status",
 					"_type": "byte",
-					"enum": {"booting":0, "ready":1, "running":2, "error":3, "done":4}
+					"enum": {
+						"booting": 0,
+						"ready": 1,
+						"running": 2,
+						"error": 3,
+						"done": 4
+					}
 				}
 			]
 		},
@@ -419,6 +440,76 @@
 			"source": "all",
 			"destination": "bbb",
 			"fields": []
+		},
+		{
+			"name": "servo_angle",
+			"description": "Control servo angles ",
+			"cmd_id": 44,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "servoAngle",
+					"_type": "byte"
+				},
+				{
+					"name": "idServo",
+					"_type": "byte"
+				}
+			]
+		},
+		{
+			"name": "stepper_param",
+			"description": "steppermotor parameters",
+			"cmd_id": 45,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "enableState",
+					"_type": "byte",
+					"enum": {
+						"stop": 0,
+						"start": 1
+					}
+				},
+				{
+					"name": "direction",
+					"_type": "byte",
+					"enum": {
+						"counterCW": 0,
+						"CW": 1
+					}
+				},
+				{
+					"name": "speed",
+					"_type": "byte"
+				}
+			]
+		},
+		{
+			"name": "stepper_nb_steps",
+			"description": "number of steps to do",
+			"cmd_id": 46,
+			"source": "stm",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "nbStepsToDo",
+					"_type": "word"
+				}
+			]
+		},
+		{
+			"name": "endStep",
+			"description": "Stepper stop",
+			"cmd_id": 47,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "nbStepsDone",
+					"_type": "word"
+				}
+			]
 		}
-	]
-}
