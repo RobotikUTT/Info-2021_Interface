@@ -499,7 +499,7 @@
 			"name": "stepper_nb_steps",
 			"description": "number of steps to do",
 			"cmd_id": 46,
-			"source": "stm",
+			"source": "arduino",
 			"destination": "bbb",
 			"fields": [
 				{
@@ -521,3 +521,5 @@
 				}
 			]
 		}
+	]
+}
