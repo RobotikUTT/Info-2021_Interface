@@ -359,11 +359,11 @@
 					"_type": "byte"
 				},
 				{
-					"name": "dist_back_right",
+					"name": "dist_side_left",
 					"_type": "byte"
 				},
 				{
-					"name": "dist_back_right",
+					"name": "dist_side_right",
 					"_type": "byte"
 				}
 			]
