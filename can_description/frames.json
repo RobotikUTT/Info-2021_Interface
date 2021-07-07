@@ -461,7 +461,7 @@
 		{
 			"name": "stepper_param",
 			"description": "steppermotor parameters",
-			"cmd_id": 44,
+			"cmd_id": 45,
 			"source": "arduino",
 			"destination": "bbb",
 			"fields": [
@@ -490,7 +490,7 @@
 		{
 			"name": "stepper_nb_steps",
 			"description": "number of steps to do",
-			"cmd_id": 45,
+			"cmd_id": 46,
 			"source": "stm",
 			"destination": "bbb",
 			"fields": [
@@ -503,7 +503,7 @@
 		{
 			"name": "endStep",
 			"description": "Stepper stop",
-			"cmd_id": 46,
+			"cmd_id": 47,
 			"source": "arduino",
 			"destination": "bbb",
 			"fields": [
