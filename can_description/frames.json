@@ -357,6 +357,14 @@
 				{
 					"name": "dist_back_right",
 					"_type": "byte"
+				},
+				{
+					"name": "dist_back_right",
+					"_type": "byte"
+				},
+				{
+					"name": "dist_back_right",
+					"_type": "byte"
 				}
 			]
 		},
