@@ -449,9 +449,67 @@
 			"destination": "bbb",
 			"fields": [
 				{
-					"pin":
+					"name": "servoAngle",
+					"_type": "byte"
+				},
+				{
+					"name": "idServo",
+					"_type": "byte"
+				}
+			]
+		},
+		{
+			"name": "stepper_param",
+			"description": "steppermotor parameters",
+			"cmd_id": 44,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "enableState",
+					"_type": "byte",
+					"enum": {
+						"stop": 0,
+						"start": 1
+					}
+				},
+				{
+					"name": "direction",
+					"_type": "byte",
+					"enum": {
+						"counterCW": 0,
+						"CW": 1
+					}
+				},
+				{
+					"name": "speed",
+					"_type": "byte"
+				}
+			]
+		},
+		{
+			"name": "stepper_nb_steps",
+			"description": "number of steps to do",
+			"cmd_id": 45,
+			"source": "stm",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "nbStepsToDo",
+					"_type": "word"
+				}
+			]
+		},
+		{
+			"name": "endStep",
+			"description": "Stepper stop",
+			"cmd_id": 46,
+			"source": "arduino",
+			"destination": "bbb",
+			"fields": [
+				{
+					"name": "nbStepsDone",
+					"_type": "word"
 				}
 			]
 		}
-	]
-}
