@@ -457,11 +457,11 @@
 			"destination": "arduino_action",
 			"fields": [
 				{
-					"name": "idServo",
+					"name": "id_servo",
 					"_type": "byte"
 				},
 				{
-					"name": "servoAngle",
+					"name": "angle",
 					"_type": "byte"
 				}
 				
@@ -475,11 +475,11 @@
 			"destination": "arduino_action",
 			"fields": [
 				{
-					"name": "enableState",
+					"name": "enable_state",
 					"_type": "byte",
 					"enum": {
-						"stop": 0,
-						"start": 1
+						"disable": 0,
+						"enable": 1
 					}
 				},
 				{
