@@ -13,8 +13,12 @@
 			"arbitration_id": 2
 		},
 		{
-			"name": "arduino",
+			"name": "arduino_sonar",
 			"arbitration_id": 3
+		},
+		{
+			"name": "arduino_action",
+			"arbitration_id": 4
 		}
 	]
 }

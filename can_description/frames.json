@@ -339,7 +339,7 @@
 			"name": "sonar_distance",
 			"description": "Data on sonar distance",
 			"cmd_id": 23,
-			"source": "arduino",
+			"source": "arduino_sonar",
 			"destination": "bbb",
 			"fields": [
 				{
@@ -388,7 +388,7 @@
 			"name": "update_screen",
 			"description": "Update screen with points and robot status",
 			"cmd_id": 30,
-			"source": "arduino",
+			"source": "arduino_sonar",
 			"destination": "bbb",
 			"fields": [
 				{
@@ -451,27 +451,28 @@
 		},
 		{
 			"name": "servo_angle",
-			"description": "Control servo angles ",
+			"description": "Control servo angles",
 			"cmd_id": 44,
-			"source": "arduino",
-			"destination": "bbb",
+			"source": "bbb",
+			"destination": "arduino_action",
 			"fields": [
-				{
-					"name": "servoAngle",
-					"_type": "byte"
-				},
 				{
 					"name": "idServo",
 					"_type": "byte"
+				},
+				{
+					"name": "servoAngle",
+					"_type": "byte"
 				}
+				
 			]
 		},
 		{
 			"name": "stepper_param",
-			"description": "steppermotor parameters",
+			"description": "Steppermotor parameters",
 			"cmd_id": 45,
-			"source": "arduino",
-			"destination": "bbb",
+			"source": "bbb",
+			"destination": "arduino_action",
 			"fields": [
 				{
 					"name": "enableState",
@@ -485,38 +486,38 @@
 					"name": "direction",
 					"_type": "byte",
 					"enum": {
-						"counterCW": 0,
+						"CCW": 0,
 						"CW": 1
 					}
 				},
 				{
-					"name": "speed",
+					"name": "speed_rpm",
 					"_type": "byte"
 				}
 			]
 		},
 		{
-			"name": "stepper_nb_steps",
-			"description": "number of steps to do",
+			"name": "stepper_steps",
+			"description": "Number of steps to do",
 			"cmd_id": 46,
-			"source": "arduino",
-			"destination": "bbb",
+			"source": "bbb",
+			"destination": "arduino_action",
 			"fields": [
 				{
-					"name": "nbStepsToDo",
+					"name": "nb_steps",
 					"_type": "word"
 				}
 			]
 		},
 		{
-			"name": "endStep",
+			"name": "end_step",
 			"description": "Stepper stop",
 			"cmd_id": 47,
-			"source": "arduino",
+			"source": "arduino_action",
 			"destination": "bbb",
 			"fields": [
 				{
-					"name": "nbStepsDone",
+					"name": "nb_steps_done",
 					"_type": "word"
 				}
 			]

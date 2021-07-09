@@ -26,8 +26,8 @@ const uint8_t SET_DOCK_HEIGHT[] = {42, 2, 2, 2, 0, 0, 0, 0, 0, 0};
 const uint8_t YOUR_DOCK_HAS_FULLFILLED_YOUR_REQUEST[] = {43, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 const uint8_t SERVO_ANGLE[] = {44, 2, 1, 1, 0, 0, 0, 0, 0, 0};
 const uint8_t STEPPER_PARAM[] = {45, 3, 1, 1, 1, 0, 0, 0, 0, 0};
-const uint8_t STEPPER_NB_STEPS[] = {46, 1, 2, 0, 0, 0, 0, 0, 0, 0};
-const uint8_t ENDSTEP[] = {47, 1, 2, 0, 0, 0, 0, 0, 0, 0};
+const uint8_t STEPPER_STEPS[] = {46, 1, 2, 0, 0, 0, 0, 0, 0, 0};
+const uint8_t END_STEP[] = {47, 1, 2, 0, 0, 0, 0, 0, 0, 0};
 const uint8_t FRAMES[][10] = {
 	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	{1, 2, 1, 1, 0, 0, 0, 0, 0, 0},
